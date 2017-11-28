@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Transformer
+namespace Transformer.Interfaces
 {
     public interface IParser
     {
