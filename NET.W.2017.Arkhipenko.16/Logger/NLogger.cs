@@ -3,10 +3,10 @@ using NLog;
 
 namespace Logger
 {
-    public class Logger :ILogger
+    public class NLogger :ILogger
     {
         private readonly NLog.Logger _logger;
-        public Logger(string className)
+        public NLogger(string className)
         {
             if (string.IsNullOrWhiteSpace(className))
             {

@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Logger;
 using Transformer;
-using Transformer.Implementations;
 using Transformer.Interfaces;
+using NLog;
+using Transformer.Implementations;
 
 
 namespace ConsoleApp
@@ -15,7 +16,7 @@ namespace ConsoleApp
     {
         static void Main()
         {
-            var logger = LoggerFactory.GetLogger("Program");
+            var logger = new NLogger("Program");
             IParser parser = new Parser(logger);
             ISerializer serializer = new Serializer();
             var addresses = parser.ParseFile(@"E:\\TestXml.txt");
